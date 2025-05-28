@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: colmcharltonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: colmcharltonpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: colmcharltonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: colmcharltonpipelinesjavascriptdocker 
+          image: mycontainerregistry123563.azurecr.io/colmcharltonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
